@@ -1,0 +1,22 @@
+body {
+    background: #dadada;
+    margin: 10px auto;
+    width: 679px;
+    border: 3px solid blue;
+    padding: 0 2em 1em;
+  }
+  h1 {
+    color: blue;
+  }
+  form label {
+    float: left;
+    width: 11em;
+    text-align: right;
+  }
+  form input {
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+  }
+  span {
+    color: red;
+  }

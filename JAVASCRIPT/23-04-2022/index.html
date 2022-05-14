@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+  </body>
+  <script>
+    var myArray = [31, 42, 3, 4, 55, 61, 7, 8, 39, 10];
+    function printArray() {
+      var message = document.getElementById("demo");
+      for (var i = 0; i < myArray.length; i++) {
+        document.write(myArray[i] + " ");
+      }
+      document.write("<br>");
+    }
+    printArray();
+
+    //tinh tong cua array
+    function sum() {
+      var sum = 0;
+      var message = document.getElementById("demo").innerHTML;
+      for (i = 0; i < myArray.length; i++) {
+        sum += myArray[i];
+      }
+      document.write("Tong gia tri cua array: " + sum);
+      document.write("<br>");
+    }
+    sum();
+
+    //gia tri lon nhat cua array
+    function max() {
+      var message = document.getElementById("demo").innerHTML;
+      var maximum = Math.max(parseInt(myArray[i]) );
+      console.log(myArray);
+      document.write(maximum);
+      console.log(maximum);
+
+      document.write("<br>");
+    }
+    max();
+
+    // let max_val = num.reduce(function (accumulator, element) {
+    //   return accumulator > element ? accumulator : element;
+    // });
+    // console.log(num);
+    // console.log("max= ", max_val);
+  </script>
+</html>

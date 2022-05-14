@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <h3>Gia tri duong</h3>
+    <p id="giatriDuong"></p>
+    <h3>Gia tri am</h3>
+    <p id="giatriAm"></p>
+    <div>
+      <h2>Bai 3: giai phuong trinh bac 1</h2>
+      <label for="">So a:</label>
+      <input type="number" name="numberA" id="numberA" /><br />
+      <label for="">So b:</label>
+      <input type="number" name="numberB" id="numberB" /><br />
+      <button onclick="ketqua()">Ket qua</button>
+      <p id="result"></p>
+    </div>
+    <div>
+      <h2>Bai 4: giai phuong trinh bac 2</h2>
+      <label for="">So a:</label>
+      <input type="number" name="a" id="a" /><br />
+      <label for="">So b:</label>
+      <input type="number" name="b" id="b" /><br />
+      <label for="">So c:</label>
+      <input type="number" name="c" id="c" /><br />
+      <button onclick="ketQua2()">Ket qua</button>
+      <p id="result2"></p>
+    </div>
+  </body>
+  <script>
+    var array = [-20, 3, -4, -12, 32, 23, 90, -100, 10];
+    
+    document.querySelector("#demo").innerHTML = array;
+
+    for (i = 0; i < array.length; i++) {
+      if (array[i] > 0) {
+        document.querySelector("#giatriDuong").innerHTML =
+         
+          "Vi tri: " +
+          i +
+          " <br>" +
+          "Gia tri: " +
+          array[i] +
+          "<br>";
+        break;
+      }
+    }
+
+    for (j = 0; j < array.length; j++) {
+      if (array[j] < 0) {
+        document.querySelector("#giatriAm").innerHTML =
+          
+          "Vi tri: " +
+          j +
+          " <br>" +
+          "Gia tri: " +
+          array[j] +
+          "<br>";
+        break;
+      }
+    }
+
+    // //Giai phuong trinh bac 1
+    function ketqua() {
+      var numbA = document.querySelector("#numberA").value;
+      var numbB = document.querySelector("#numberB").value;
+
+      if (numbA > 0 || numbA < 0) {
+        var result = -numbB / numbA;
+        document.querySelector("#result").innerHTML = result;
+      } else {
+        document.querySelector("#result").innerHTML = "Khong xac dinh";
+      }
+    }
+
+    //Giai phuong trinh bac 2
+    function ketQua2() {
+      var a = document.querySelector("#a").value;
+      var b = document.querySelector("#b").value;
+      var c = document.querySelector("#c").value;
+
+      var delta = b * b - 4 * a * c;
+
+      if (delta > 0) {
+        var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        document.querySelector("#result2").innerHTML =
+          "nghiem 1: " + x1 + "<br>" + "nghiem 2: " + x2;
+      }
+      if (delta === 0) {
+        var x = -b / (2 * a);
+        console.log(x);
+        document.querySelector("#result2").innerHTML =
+          "phuong trinh co nghiem kep: " + x;
+      }
+      if (delta < 0) {
+        document.querySelector("#result2").innerHTML = "phuong trinh vo nghiem";
+      }
+
+      clear();
+    }
+    function clear() {
+      document.querySelector("#a").value = "";
+      document.querySelector("#b").value = "";
+      document.querySelector("#c").value = "";
+    }
+  </script>
+</html>

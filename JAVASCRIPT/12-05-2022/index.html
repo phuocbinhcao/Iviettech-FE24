@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="test-demo" type="text" placeholder="input content"><br>
+        <p id="demo"></p>
+        <button id="btn-submit" onclick="submit()">submit</button>
+    </div>
+</body>
+<script>
+    document.querySelector('#test-demo').addEventListener('keydown', function(item){
+        var text = item.key;
+        document.getElementById('demo').innerHTML = text;
+    })
+</script>
+</html>

@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 1680px;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #edf0f5;
+
+}
+.container {
+  width: 60%;
+  height: 85vh;
+  margin: 0 auto;
+  background-color: #edf0f5;
+}
+.header {
+  height: 80px;
+  width: 100%;
+  background: #3a5a97;
+}
+.header__logo {
+  width: 60%;
+  float: left;
+}
+.header__logo img {
+  width: 100%;
+  max-width: 200px;
+}
+.header__form {
+  width: 40%;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0.5em;
+  color: white;
+}
+.header__form .btn {
+  padding: 2px 5px;
+  background-color: #4f699e;
+  color: white;
+  border: 1px solid #4f699e;
+  box-shadow: 1px 1px 1px black;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.form-input {
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.form-input input {
+  padding: 4px 5px;
+  margin: 2px 10px 2px 0;
+}
+.form-input label {
+  font-size: 14px;
+}
+input[type="checkbox"] {
+  margin-right: unset;
+}
+.form-input small {
+  font-size: 12px;
+  color: rgb(204, 201, 201);
+}
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #edf0f5;
+  display: flex;
+}
+.section {
+  width: 57%;
+  margin: 4em 1em;
+}
+.section h2 {
+  margin-right: 3em;
+  margin-bottom: 1.5em;
+}
+.section p {
+  color: #a3a2a2;
+  display: flex;
+  align-items: center;
+}
+.section p i {
+  font-size: 200%;
+  padding-right: 0.5em;
+  margin: 0.75em 0;
+  color: #a3a2a2;
+}
+.section span {
+  font-weight: bold;
+  color: black;
+  padding: 0 10px;
+}
+.main__form {
+  width: 43%;
+  margin-top: 30px;
+  margin-right: 8px;
+}
+.main__form form {
+  margin-top: 15px;
+}
+.main__form h1 {
+  margin-bottom: 5px;
+}
+.form__name {
+  display: flex;
+}
+.form__name input:first-child {
+  margin-right: 5px !important;
+}
+.form__name input:last-child {
+  margin-left: 5px !important;
+}
+.main__form input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 10px;
+  margin: 6px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+.main__form input[type="date"] {
+  width: unset;
+}
+.birthday {
+  margin-top: 5px;
+}
+.small {
+  width: 85%;
+  font-size: 14px;
+}
+.form__gender input {
+  height: 12px;
+  width: 12px;
+}
+.main__form .btn {
+  width: 50%;
+  background-color: rgb(72, 145, 72);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  margin: 15px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+.select {
+  display: flex;
+  margin: 5px 0 10px;
+}
+.select small {
+  margin-left: 13px;
+  margin-right: 20px;
+  font-size: 13px;
+}
+.form__gender {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.form__gender label {
+  margin-right: 20px;
+}
+a {
+  text-decoration: none;
+}
+.page {
+  border-top: 1px solid black;
+  padding-top: 15px;
+}
+.footer {
+  margin: 10px 10px;
+}
+.footer a {
+  margin-right: 10px;
+}
+.info {
+  border-top: 1px solid black;
+  margin-top: 5px;
+  padding: 10px 0 5px;
+}
+.info a {
+  margin-right: 20px;
+}
+.header__logo--mobile {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .header__logo,
+  .section {
+    display: none;
+  }
+  .header {
+    padding-left: 5px;
+  }
+  .header__form,
+  .main__form {
+    width: 100%;
+    margin-left: 10px;
+  }
+}

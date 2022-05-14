@@ -1,0 +1,254 @@
+:root {
+  --red-color: rgb(146, 28, 28);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: white;
+  font-size: 100%;
+  width: 100%;
+  max-width: 1680px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 96%;
+  max-width: 996px;
+  border: 3px solid var(--red-color);
+  margin: 0.5em auto;
+  background: rgb(241, 241, 232);
+}
+.header {
+  width: 100%;
+  background: linear-gradient(
+    45deg,
+    rgb(228, 182, 97),
+    white 50%,
+    rgb(228, 182, 97)
+  );
+  padding-bottom: 2.0202%;
+  display: flex;
+}
+.header img {
+  margin-left: 2.0202%;
+  margin-top: 2.0202%;
+  width: 8.0808%;
+  height: 8.0808%;
+  min-width: 60px;
+}
+.title{
+  width: 91%;
+}
+.title h1 {
+  font-size: 2.2em;
+  margin-left: 2.0202%;
+  padding-top: 2%;
+}
+.title h3 {
+  font-size: 1.25em;
+  margin-left: 2.0202%;
+  font-style: italic;
+}
+.title span {
+  text-shadow: 2px 2px 1px var(--red-color);
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.home {
+  color: yellow !important;
+}
+.menu li {
+  list-style: none;
+  width: 20%;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+  background-color: var(--red-color);
+}
+.menu li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.sub__menu {
+  position: absolute;
+  display: none;
+}
+.sub__menu li {
+  width: 198px;
+  background-color: var(--red-color);
+}
+.menu li:hover {
+  background-color: rgb(104, 24, 24);
+  cursor: pointer;
+  color: black;
+}
+.menu li:hover > .sub__menu {
+  display: block;
+}
+main{
+  display: flex;
+}
+.info {
+  width: 28.6868%;
+  padding: 1em 0.75em;
+}
+.info__scroll {
+  margin-bottom: 20px;
+}
+.info__first {
+  height: 300px;
+  overflow: auto;
+}
+.info__scroll h2 {
+  background: var(--red-color);
+  color: white;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+.info__toobin:first-child {
+  margin-top: 0.625em;
+}
+.info__toobin {
+  display: flex;
+  margin-top: 1.25em;
+}
+.toobin {
+  margin-left: 0.5em;
+}
+.toobin span {
+  border-left: 2px solid var(--red-color);
+  padding-left: 0.25em;
+}
+.info__toobin img {
+  width: 60px;
+  height: 60px;
+}
+h1 {
+  color: rgb(145, 55, 55);
+}
+.main {
+  /* float: right; */
+  width: 70.7%;
+  padding: 0.5em 1.5em 0.5em 0.25em;
+}
+.main h1 {
+  font-size: 1.5em;
+  padding-bottom: 0.25em;
+}
+.main__mission blockquote {
+  margin: 0.75em 5em 0.75em 3em;
+}
+.main__guest {
+  border: 1px solid var(--red-color);
+  border-radius: 10px;
+  margin: 30px 0;
+  background-color: white;
+  box-shadow: 5px 5px 3px var(--red-color);
+}
+.speaker__sampson {
+  float: left;
+}
+.speaker__sampson img {
+  max-width: 100%;
+  float: right;
+}
+.h2 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: black;
+  border-bottom: 2px solid var(--red-color);
+}
+.read-more {
+  margin: 0.5em 0 0.75em;
+}
+.main__ticket {
+  clear: both;
+  border-top: 2px solid var(--red-color);
+  padding-top: 0.75em;
+}
+.main__ticket ul {
+  margin-left: 1em;
+}
+.main__ticket ul li {
+  padding-bottom: 0.25em;
+  list-style-type: circle;
+}
+.footer {
+  clear: both;
+  height: 50px;
+  width: 100%;
+  background: var(--red-color);
+  text-align: center;
+  color: rgb(245, 240, 240);
+}
+.footer p {
+  padding: 1em 0;
+}
+.slicknav_menu {
+  display: none;
+}
+@media all and (max-width: 767px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  body {
+    width: 100%;
+    margin: 0;
+  }
+  footer p {
+    text-align: center;
+  }
+  main{
+    flex-direction: column;
+  }
+  .main {
+    order: 1;
+    padding-left: 1.25em;
+  }
+  .title {
+    width: 100%;
+  }
+  .info{
+    order: 2;
+  }
+}
+@media all and (max-width: 580px) {
+  .header,
+  footer p {
+    text-align: center;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header h1 {
+    font-size: 1.625em;
+    padding: 0.4em 0 0.25em 0;
+    margin-left: 0;
+  }
+  .header h3 {
+    font-size: 1.25em;
+    margin-left: 0;
+  }
+  .header img {
+    margin-left: 0;
+  }
+  .menu {
+    display: none;
+  }
+  .slicknav_menu {
+    display: block;
+    width: 100%;
+    background-color: var(--red-color) !important;
+  }
+}

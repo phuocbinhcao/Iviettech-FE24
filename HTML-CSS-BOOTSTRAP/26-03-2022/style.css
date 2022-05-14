@@ -1,0 +1,22 @@
+/* #nav_list ul{
+    list-style-type: none;
+    margin-left: 1.25em;
+    margin-bottom: 1.5em;
+}
+#nav_list ul li{
+    width: 200px;
+    margin-bottom: .5em;
+    border: 2px solid blue;
+}
+#nav_list ul li a{
+    display: block;
+    text-decoration: none;
+    padding: .5em 0 .5em 1.5em;
+    color: blue;
+}
+#nav_list ul li .current{
+    background-color: rgb(167, 161, 161);
+}
+#nav_list ul li:hover{
+    background-color: green;
+} */

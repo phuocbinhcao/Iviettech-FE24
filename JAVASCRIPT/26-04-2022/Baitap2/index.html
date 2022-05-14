@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="main__students">
+        <div class="main__head">
+          <h1>Students</h1>
+        </div>
+        <div class="main__body">
+          <!-- <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" class="form-control my-2" id="id" />
+          </div> -->
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="class">Class:</label>
+            <input
+              type="text"
+              id="class"
+              name="lop"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="mail"
+            />
+          </div>
+          <div class="form-group">
+            <label for="class">Phone Number:</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+            />
+          </div>
+          <div class="button">
+            <button
+              id="btn_register"
+              class="btn btn-primary my-3"
+              onclick="addNew()"
+            >
+              Add New
+            </button>
+            <button  class="btn" onclick="refress()">Refress</button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="main__list">
+        <div class="main__head">
+          <h1>Students Infomations</h1>
+        </div>
+        <div class="main__list--students">
+          <table class="table" id="table">
+            <thead>
+              <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Name</th>
+                <th scope="col">Class</th>
+                <th scope="col">Email Address</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+          
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="student.js"></script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        /* grid-template-columns: 200px 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 60px; */
+        /* grid-template-columns: auto auto auto auto auto auto; */
+        grid-template: repeat(24, 30px) / repeat(12, 50px);
+        gap: 10px;
+        padding: 10px;
+        width: 800px;
+        /* margin:  0 auto; */
+      }
+      div {
+        background: rgb(184, 56, 56);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .copy{
+          grid-area: 1 / 1 / span 2 / span 3;
+      }
+      .menu{
+          grid-area: 1 / 7 / span 1 / span 6;
+      }
+      .div2{
+          grid-area: 3 / 1 / span 7 / span 12;
+      }
+      .div3{
+          grid-area: 10 / 1 / span 2 / span 3;
+      }
+      .div4{
+          grid-area: 10 / 7 / span 2 / span 3;
+      }
+      .div5{
+          grid-area: 12 / 1 / span 4 / span 6;
+      }
+      .div6{
+          grid-area: 12 / 7 / span 4 / span 3;
+      }
+      .div7{
+          grid-area: 12 / 10 / span 4 / span 3;
+      }
+      .div8{
+          grid-area: 16 / 1 / span 4/ span 6;
+      }
+      .div9{
+          grid-area: 16 / 7 /span 4 / span 3;
+      }
+      .div10{
+          grid-area: 16 / 10 /span 4/ span 3;
+      }
+      .div11{
+          grid-area: 20 / 1 / span 2 / span 12;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="copy">Copyright logo</div>
+    <div class="menu">ákdfjl</div>
+
+    <div class="div2">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, maiores
+      alias? Soluta quas at quia nihil, porro rem. Dolore, excepturi eaque.
+      Sapiente officiis illo assumenda nihil saepe tempora veniam porro! Quidem
+      libero aperiam harum doloremque at voluptatem in recusandae sequi. Sequi
+      totam quo ipsam impedit, temporibus sint earum tempore quisquam!
+    </div>
+
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+
+    <div class="div5">5</div>
+    <div class="div6">6</div>
+    <div class="div7">7</div>
+
+    <div class="div8">8</div>
+    <div class="div9">9</div>
+    <div class="div10">10</div>
+
+    <div class="div11">11</div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+ul{
+    display: flex;
+    li{
+        list-style: none;
+        display: block;
+        width: 200px;
+        text-align: center;
+        position: relative;
+        background: blue;
+        a{
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: rgb(170, 87, 87);
+        border-right: 1px solid #000;
+
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            display: none;
+            li{
+                position: relative;
+                left: 0;
+                ul{
+                    display: none;
+                    position: absolute;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    li:hover{
+        background: rgb(227, 227, 233);
+        cursor: pointer;
+        ul{
+            display: block;
+        }
+    }
+}

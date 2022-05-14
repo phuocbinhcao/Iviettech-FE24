@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* tất cả thẻ li nằm trong thẻ .main */
+        .main li{
+            font-size: 90%; 
+        }
+        /* tất cả thẻ a nằm trong thẻ ul */
+        ul a{
+            color: green;
+        }
+        /* thẻ p gần kề với thẻ h3 nhất */
+        h3+p{
+            margin-top: .5em;
+            background-color: rgb(178, 130, 223);
+        }
+        /* tất cả thẻ p là con của .main */
+        .main>p{
+            font-size: 80%;
+            background: rgb(65, 65, 156);
+        }
+        li>a{
+            background: rgb(130, 187, 130);
+        }
+        /* tất cả thẻ p đồng cấp với thẻ h1 */
+        
+        h1~p{
+            margin-left: 2em;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li>Paragraph 1</li>
+            <li><a href="">Paragraph 2</a></li>
+            <li>Paragraph 3</li>
+            <li><a href="">Paragraph 4</a></li>
+            <li>Paragraph 5
+                <ol>
+                    <li>Paragraph 6</li>
+                    <li><a href="">Paragraph 7</a></li>
+                </ol>
+            </li>
+            <li>Paragraph 8</li>
+        </ul>
+        <h2>Paragraph</h2>
+        <div>
+            <h3>Paragraph 9</h3>
+            <p>Paragraph 10</p>
+            <p>Paragraph 11</p>
+        </div>
+        <p>Paragraph 12 </p>
+        <p>Paragraph 13</p>
+    </div>
+    <h1>Paragraph 14</h1>
+    <p>Paragraph 15
+        <section>
+            <p>Paragraph 16</p>
+        </section>
+    </p>
+    <p>Paragraph 17</p>
+</body>
+</html>

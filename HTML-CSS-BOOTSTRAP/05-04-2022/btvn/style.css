@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #dadada;
+    width: 96%;
+    max-width: 1680px;
+}
+.container{
+    width: 900px;
+    margin: 10px auto;
+    border: 1px solid black;
+    background: white;
+    padding: 10px;
+}
+.container__h1{
+    color: rgb(224, 81, 37);
+    margin: 20px 0;
+}
+.form{
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.form__h2{
+    padding: 10px;
+    background: #256aa5;
+    margin-bottom: 5px;
+    color: white;
+}
+.form form{
+    padding: 10px;
+}
+.button{
+    padding-left: 8em;;
+}
+.table{
+    padding: 10px;
+
+}
+.table__header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+}
+.table__footer{
+    display: flex;
+    justify-content: space-between;
+}
+.table table{
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+th,td{
+    border: 1px solid black;
+    padding: 5px;
+}
+thead th{
+    background: #256aa5;
+    color: white;
+    text-align: start;
+}
+tfoot th{
+    text-align: start;
+}
+.table__header--search input{
+    padding: 5px;
+    font-size: 15px;
+}
+ul{
+    display: flex;
+}
+ul li{
+    list-style: none;
+    width: 30px;
+    text-align: center;
+
+}
+ul li a{
+    text-decoration: none;
+}
+
+.button button{
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.button--submit{
+    background: #256aa5;
+    color: white;
+    outline: none;
+    
+}
+.button--submit:hover{
+    background: rgb(99, 99, 228);
+}
+.form label{
+    width: 8em;
+    float: left;
+    text-align: center;
+}
+.form input{
+    width: 30%;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 15px;
+}

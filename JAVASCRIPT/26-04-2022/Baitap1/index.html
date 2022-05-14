@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        main {
+            width: 500px;
+            margin: 10px auto;
+            padding: 20px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 15px;
+            margin: 5px;
+        }
+        .phep{
+            margin-top: 10px;
+        }
+        button{
+            padding: 5px 20px;
+            font-size: 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Bai tap 1</h1>
+        <input type="number" id="number1" /><br />
+        <input type="number" id="number2" />
+
+        <div class="phep">
+            <button id="Cong" onclick="sum()">Cong</button>
+            <button id="Tru" onclick="Tru()">Tru</button>
+        <button id="Nhan" onclick="Nhan()">Nhan</button>
+        <button id="Chia" onclick="Chia()">Chia</button>
+      </div>
+
+            <br />
+            <h2>Ket qua: <span id="ketQua"></span></h2>
+            
+    </main>
+</body>
+<script>
+
+    function sum() {
+        let numb1 = Number(document.getElementById('number1').value);
+        let numb2 = Number(document.getElementById('number2').value);
+        let sum = parseInt(numb1) + parseInt(numb2)
+        console.log(sum);
+        document.getElementById('ketQua').innerHTML = sum;
+    }
+    sum();
+
+    function Tru() {
+        let numb1 = Number(document.getElementById('number1').value);
+        let numb2 = Number(document.getElementById('number2').value);
+        let sum = parseInt(numb1) - parseInt(numb2)
+        console.log(sum);
+        document.getElementById('ketQua').innerHTML = sum;
+    }
+    Tru();
+
+    function Nhan() {
+        let numb1 = Number(document.getElementById('number1').value);
+        let numb2 = Number(document.getElementById('number2').value);
+        let sum = parseInt(numb1) * parseInt(numb2)
+        console.log(sum);
+        document.getElementById('ketQua').innerHTML = sum;
+    }
+    Nhan();
+
+    function Chia() {
+        let numb1 = Number(document.getElementById('number1').value);
+        let numb2 = Number(document.getElementById('number2').value);
+        let sum = parseInt(numb1) / parseInt(numb2)
+        console.log(sum);
+        document.getElementById('ketQua').innerHTML = sum;
+    }
+    Chia();
+</script>
+
+</html>

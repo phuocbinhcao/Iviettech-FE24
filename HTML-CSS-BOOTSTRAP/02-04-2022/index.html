@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th,td{
+            width: 100px;
+        }
+        tbody tr:nth-child(odd),tfoot th{
+            background: rgb(134, 214, 134);
+        }
+        tbody tr:nth-child(even){
+            background: rgb(127, 226, 226);
+        }
+        tr td{
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Lop</th>
+                    <th>Phong</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>11A1</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>11A1</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>111</th>
+                                <th>112</th>
+                            </tr>
+                            <tr>
+                                <th>2134</th>
+                                <th>2134</th>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>1</th>
+                    <th>1</th>
+                    <th>1</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

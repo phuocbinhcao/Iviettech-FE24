@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <h1>Task Manager</h1>
+      <main>
+        <div class="tasks">
+          <input type="text" name="name" id="name" placeholder="Input task"/><br />
+          <input
+            type="button"
+            value="Add task"
+            name="add-task"
+            id="add-task"
+            
+            onclick="addTask()"
+          /><br />
+          <input
+            type="button"
+            value="Clear Tasks"
+            name="clear-task"
+            id="clear-task"
+            onclick="reset()"
+          />
+        </div>
+        <div class="listTask" id="listTask"></div>
+      </main>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
