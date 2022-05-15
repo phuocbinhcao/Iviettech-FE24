@@ -1,31 +1,34 @@
-function Register() {
-  document.querySelector("#main-form-sigUp").style = "display: block";
+var modalRegister = document.querySelector("#main-form-sigUp");
+var modalLogin = document.querySelector("#main-form-login");
+var btnLogin = document.querySelector("#btn-Login");
+var btnRegister = document.querySelector("#btn-Register");
+var iconCloseRegister = document.querySelector(".close-register i");
+var iconCloseLogin = document.querySelector(".close-login i");
+
+//Register toggle
+function toggleModalRegister() {
+  modalRegister.classList.toggle("hide-register");
 }
-function closeRegister() {
-  document.querySelector("#main-form-sigUp").style = "display: none";
-  clearInput()
+btnRegister.addEventListener("click", toggleModalRegister);
+iconCloseRegister.addEventListener("click", toggleModalRegister);
+modalRegister.addEventListener("click", function (e) {
+  if (e.target == e.currentTarget) {
+    toggleModalRegister();
+  }
+});
+
+//Login toggle
+function toggleModalLogin() {
+  modalLogin.classList.toggle("hide-login");
 }
-
-function logIn() {
-  document.querySelector("#main-form-login").style = "display: block";
-}
-function closeLogIn() {
-  document.querySelector("#main-form-login").style = "display: none";
-  clearInput();
-}
-
-// function toggleModal(){
-    // modal.classList.toggle('hide')
-// }
-
-// var modal = document.querySelector(".main-form");
-// var btnLogin = document.querySelector("#btn-Login");
-// var btnRegister = document.querySelector("#btn-Register");
-
-// btnLogin.addEventListener("click", toggleModal)
-// btnRegister.addEventListener("click", toggleModal)
-// modal.addEventListener("click", toggleModal)
-
+btnLogin.addEventListener("click", toggleModalLogin);
+iconCloseLogin.addEventListener("click", toggleModalLogin);
+modalLogin.addEventListener("click", function (e) {
+  if (e.target == e.currentTarget) {
+    toggleModalLogin();
+  }
+});
+//Check localStorage
 var listUsersRegister = localStorage.getItem("listUsersRegister")
   ? JSON.parse(localStorage.getItem("listUsersRegister"))
   : [];
@@ -41,10 +44,9 @@ var inputPassword = document.querySelector("#password");
 var inputAddress = document.querySelector("#address");
 var inputPhone = document.querySelector("#phoneNumber");
 
-//form check Register
+//form add Register
 formRegister.addEventListener("submit", function onFormRegister(e) {
   e.preventDefault();
-
   let isEmptyError = checkEmptyError([
     fname,
     email,
@@ -64,39 +66,29 @@ formRegister.addEventListener("submit", function onFormRegister(e) {
       "listUsersRegister",
       JSON.stringify(listUsersRegister)
     );
-
-    document.querySelector("#main-form-sigUp").style = "display: none";
-    document.querySelector("body").style = "background-color: unset";
-    alert("Dang ky thanh cong")
+    alert("Dang ky thanh cong");
+    toggleModalRegister();
   }
 });
-function checkItemLogin(){
-    var newItem = JSON.parse(localStorage.getItem("listUsersRegister"));
 
+//Check Login & add user login
+function checkItemLogin() {
+  var newItem = JSON.parse(localStorage.getItem("listUsersRegister"));
   var emailLogin = document.querySelector("#email_login").value;
   var passwordLogin = document.querySelector("#password_login").value;
-
   var index = newItem.findIndex(
     (item) => item.email === emailLogin && item.password === passwordLogin
   );
-  if(index >=0){
-    alert("dang nhap thanh cong")
+  if (index >= 0) {
+    console.log(index);
+    alert("dang nhap thanh cong");
     addInfoLogin();
-      clearInput();
-      localStorage.setItem("listUsersLogin", JSON.stringify(listUsersLogin));
-      document.querySelector("#main-form-login").style = "display: none";
-      document.querySelector("body").style = "background-color: unset";
-  } 
-  if(index < 0) {
-    if(index.email !== emailLogin || index.password === passwordLogin){
-        alert("vui long nhap lai email")
-    } else if(index.email === emailLogin || index.password !== passwordLogin){
-        alert("vui long nhap lai mat khau")
-    } else if(index.email !== emailLogin || index.password !== passwordLogin){
-        alert("Ban chua co tai khoan")
-    }
+    clearInput();
+    localStorage.setItem("listUsersLogin", JSON.stringify(listUsersLogin));
+    toggleModalLogin();
+  } else {
+    alert("Dang nhap that bai, Vui long dang ky tai khoan");
   }
-  
 }
 
 // form check Login
@@ -108,28 +100,21 @@ formLogin.addEventListener("submit", function formCheckLogin(e) {
     return false;
   } else {
     checkItemLogin();
-    // if (index >= 0) {
-    //   alert("dang nhap thanh cong");
-    //   addInfoLogin();
-    //   clearInput();
-    //   localStorage.setItem("listUsersLogin", JSON.stringify(listUsersLogin));
-    //   document.querySelector("#main-form-login").style = "display: none";
-    //   document.querySelector("body").style = "background-color: unset";
-    // } else {
-    //   alert("dang nhap that bai, vui long dang ky");
-    // }
   }
 });
+
+//clear input value
 function clearInput() {
   inputName.value = "";
   inputEmail.value = "";
   inputPassword.value = "";
   inputAddress.value = "";
   inputPhone.value = "";
-  document.querySelector("#email_login").value ="";
-  document.querySelector("#password_login").value="";
+  document.querySelector("#email_login").value = "";
+  document.querySelector("#password_login").value = "";
 }
 
+// add information user register
 function addInfoRegister() {
   var name = inputName.value;
   var email = inputEmail.value;
@@ -146,10 +131,10 @@ function addInfoRegister() {
   listUsersRegister.push(newList);
 }
 
+// add information user login
 function addInfoLogin() {
-    var passwordLogin = document.querySelector("#password_login").value;
-    var emailLogin = document.querySelector("#email_login").value;
-  
+  var passwordLogin = document.querySelector("#password_login").value;
+  var emailLogin = document.querySelector("#email_login").value;
   var newListLogin = {
     email: emailLogin,
     password: passwordLogin,
@@ -157,16 +142,21 @@ function addInfoLogin() {
   listUsersLogin.push(newListLogin);
 }
 
+// check Error
 function setError(input, message) {
   var formControl = input.parentElement; //.form-outline
   var span = formControl.querySelector("span");
   formControl.className = "form-outline error";
   span.innerText = message;
 }
+
+// check success
 function setSuccess(input) {
   var formControl = input.parentElement;
   formControl.className = "form-outline success";
 }
+
+//check mail error
 function checkEmailError(input) {
   var regexEmail =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -182,11 +172,11 @@ function checkEmailError(input) {
   return isEmailError;
 }
 
+// check empty error input
 function checkEmptyError(listInput) {
   let isEmptyError = false;
   listInput.forEach((input) => {
     input.value = input.value.trim();
-
     if (!input.value) {
       isEmptyError = true;
       setError(input, "khong duoc de trong");
@@ -197,6 +187,7 @@ function checkEmptyError(listInput) {
   return isEmptyError;
 }
 
+// check length input
 function checkLengthError(input, min, max) {
   input.value = input.value.trim();
 

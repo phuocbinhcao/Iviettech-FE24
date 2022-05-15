@@ -1,6 +1,8 @@
 body{
     position: relative;
     overflow: hidden;
+    height: 100vh;
+    font-family: sans-serif;
 }
 .main-form{
     position: fixed;
@@ -45,10 +47,13 @@ body{
     visibility: hidden;
     font-size: 15px;
 }
-.close-register{
+.close-register, .close-login{
     float: right;
     cursor: pointer;
 }
-.hide{
+.hide-register{
+    display: none;
+}
+.hide-login{
     display: none;
 }
