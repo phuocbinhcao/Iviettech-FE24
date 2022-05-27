@@ -79,8 +79,8 @@ function checkItemLogin() {
   var index = newItem.findIndex(
     (item) => item.email === emailLogin && item.password === passwordLogin
   );
+
   if (index >= 0) {
-    console.log(index);
     alert("dang nhap thanh cong");
     addInfoLogin();
     clearInput();

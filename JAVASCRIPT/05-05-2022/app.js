@@ -33,7 +33,9 @@ function addTask() {
   };
   if(!name) return alert("please enter you task name");
   listTask.push(newItem);
+  //Luu vao localStorage
   localStorage.setItem("listTasks", JSON.stringify(listTask));
+
   showListTask();
   reset();
 }

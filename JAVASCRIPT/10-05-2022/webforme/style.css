@@ -57,3 +57,12 @@ body{
 .hide-login{
     display: none;
 }
+.hide_btn{
+    display: none;
+}
+.show_btn{
+    display: block;
+}
+#btn-Logout{
+    display: none;
+}
