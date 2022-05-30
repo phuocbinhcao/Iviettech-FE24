@@ -49,26 +49,94 @@ var age = $("#birthday").blur(function () {
 
 // //Add new student
 $("#btn_add").click(function (e) {
-  e.preventDefault();
+  var isValid = true;
+  //check name
   var name = $("#name").val().trim();
+  if (name === "") {
+    $(".error-name").text("Tên không được để trống");
+    isValid = false;
+  } else if (name.length < 4) {
+    $(".error-name").text("Vui lòng nhập đầy đủ họ tên");
+    isValid = false;
+  } else {
+    $(".error-name").text("");
+  }
+  $("#name").val(name);
+  //check email
   var email = $("#email").val().trim();
+  var emailRegex =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  if (email === "") {
+    $(".error-email").text("Email không được để trống");
+    isValid = false;
+  } else if (!emailRegex.test(email)) {
+    $(".error-email").text("Email chưa đúng định dạng");
+    isValid = false;
+  } else {
+    $(".error-email").text("");
+  }
+  $("#email").val(email);
+  //check birthday
   var birthday = $("#birthday").val().trim();
-  var className = $("#class").val().trim();
+  if (birthday === "") {
+    $(".error-birthday").text("Birthday không được để trống");
+    isValid = false;
+  }  else {
+    $(".error-birthday").text("");
+  }
+  $("#birthday").val(birthday);
+  //check address
   var address = $("#address").val().trim();
+  if (address === "") {
+    $(".error-address").text("Address không được để trống");
+    isValid = false;
+  }  else {
+    $(".error-address").text("");
+  }
+  $("#address").val(address);
+  //check class
+  var className = $("#class").val().trim();
+  if (className === "") {
+    $(".error-class").text("Class không được để trống");
+    isValid = false;
+  }  else {
+    $(".error-class").text("");
+  }
+  $("#class").val(className);
+  //check name
+  var name = $("#name").val().trim();
+  if (name === "") {
+    $(".error-name").text("Tên không được để trống");
+    isValid = false;
+  } else if (name.length < 4) {
+    $(".error-name").text("Vui lòng nhập đầy đủ họ tên");
+    isValid = false;
+  } else {
+    $(".error-name").text("");
+  }
+  $("#name").val(name);
 
-  var newItem = {
-    Id: Math.floor(Math.random() * 1000) + 1,
-    name: name,
-    email: email,
-    class: className,
-    age: age,
-    birthday: birthday,
-    address: address,
-  };
-  students.push(newItem);
-  localStorage.setItem("list-students", JSON.stringify(students));
-  showStudents(students);
-  // clear();
+  //thực thi sự kiện add studen mới
+  if (!isValid) {
+    e.preventDefault();
+  } else {
+    //tạo student mới
+    var newItem = {
+      Id: Math.floor(Math.random() * 1000) + 1,
+      name: name,
+      email: email,
+      class: className,
+      age: age,
+      birthday: birthday,
+      address: address,
+    };
+
+    students.push(newItem);
+    //lưu localStorage
+    localStorage.setItem("list-students", JSON.stringify(students));
+    showStudents(students);
+    clear();
+  }
 });
 
 //CONTROL PAGINATION
@@ -123,13 +191,11 @@ function renderListPage() {
 function changePage() {
   var currentPages = $("#number-page *");
   for (let i = 0; i <= currentPages.length; i++) {
-    currentPages[i].addEventListener("click", () => {
-      // $(`currentPages${i}`).click(function(){
+    $(`.number-page p:eq(${currentPages[i]})`).click(function () {
       var value = i + 1;
       currentPage = value;
       $("#number-page p").removeClass("active");
       $(`.number-page p:eq(${currentPage - 1})`).addClass("active");
-      // currentPages[i].classList.add("active");
       getCurrentPage(currentPage);
       showStudents(students);
     });
@@ -206,21 +272,28 @@ $("#btn_update").click(function () {
 });
 //Show detail student
 function ShowDetailItem(index) {
-  $(".detail").show();
+  $(".modal-detail").show();
   $(".detail__body").empty();
   var detail = `
-        <h2>${students[index].name}</h2>
-        <p>Id: ${students[index].Id}</p>
-        <p>Class: ${students[index].class}</p>
-        <p>Email: ${students[index].email}</p>
-        <p>Age: ${students[index].age}</p>
-        <p>Address: ${students[index].address}</p>
-        <p>Birthday: ${students[index].birthday}</p>
+        <h1>${students[index].name}</h1>
+        <div class="body-info">
+          <p><span>Id:</span> ${students[index].Id}</p>
+          <p><span>Class:</span> ${students[index].class}</p>
+          <p><span>Email:</span> ${students[index].email}</p>
+          <p><span>Age:</span> ${students[index].age}</p>
+          <p><span>Address:</span> ${students[index].address}</p>
+          <p><span>Birthday:</span> ${students[index].birthday}</p>
+        </div>
       `;
   $(".detail__body").append(detail);
 }
 $("#closeDetail").click(function () {
-  $(".detail").hide();
+  $(".modal-detail").hide();
+});
+$(".modal-detail").click(function (e) {
+  if (e.target == e.currentTarget) {
+    $(".modal-detail").hide();
+  }
 });
 //search student with name
 $("#searchInput").on("input", function () {
@@ -229,4 +302,5 @@ $("#searchInput").on("input", function () {
     return student.name.toUpperCase().includes(valueInput.toUpperCase());
   });
   showStudents(studentSearch);
+  renderListPage(studentSearch);
 });
