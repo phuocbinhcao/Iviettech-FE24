@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+body{
+  background-color: #dadada;
+}
+.todos-list{
+  border: 2px solid #adadad;
+  width: 600px;
+  margin: 20px auto;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 4px 4px 5px gray;
+}

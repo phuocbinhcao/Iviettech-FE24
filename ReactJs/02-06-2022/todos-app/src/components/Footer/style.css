@@ -1,0 +1,25 @@
+.footer {
+  border-top: 2px solid #adadad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.footer button {
+  border: 1px solid #adadad;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.footer button:hover {
+  cursor: pointer;
+  background-color: rgb(133, 134, 136);
+}
+.footer-btn span {
+  margin: 0 15px;
+}
+.footer-btn span:first-child {
+  color: orangered;
+}
+.footer-btn span:hover {
+  cursor: pointer;
+}

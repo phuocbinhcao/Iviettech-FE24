@@ -1,0 +1,40 @@
+.todo-body {
+  padding: 30px;
+}
+.check {
+  display: flex;
+  align-items: center;
+}
+.check > input {
+  margin-right: 20px;
+}
+.list-todo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #adadad;
+}
+.list-todo p {
+  margin-left: 5px;
+  color: #797878;
+  font-weight: 700;
+}
+.list-icon {
+  margin-right: 5px;
+}
+.list-icon i {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #adadad;
+}
+.list-icon i:hover {
+  cursor: pointer;
+}
+.list-icon i:first-child:hover {
+  color: rgb(23, 76, 210);
+}
+.list-icon i:last-child:hover {
+  color: orangered;
+}
