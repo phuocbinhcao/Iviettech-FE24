@@ -1,0 +1,9 @@
+ #todoList{
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 80%;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid #adadad;
+}

@@ -1,0 +1,13 @@
+.btn-input{
+    font-size: 33px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid #adadad;
+    color: #adadad;
+}
+.btn-input:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    color: black;
+}

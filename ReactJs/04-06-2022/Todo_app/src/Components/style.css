@@ -1,0 +1,8 @@
+.todoList{
+    width: 600px;
+    border: 2px solid black;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px gray;
+    background-color: #fff;
+}

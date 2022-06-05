@@ -1,70 +1,15 @@
 import React from "react";
+import ListTodo from "../ListTodo/ListTodo";
 import "./style.css";
 
 const Body = () => {
 
   return (
     <div className="todo-body">
-      <div className="list-todo">
-        <div className="check">
-          <input type="checkbox" />
-          <p>This is a first task</p>
-        </div>
-        <div className="list-icon">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash-can"></i>
-        </div>
-      </div>
-      <div className="list-todo">
-        <div className="check">
-          <input type="checkbox" />
-          <p>This is a first task</p>
-        </div>
-        <div className="list-icon">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash-can"></i>
-        </div>
-      </div>
-      <div className="list-todo">
-        <div className="check">
-          <input type="checkbox" />
-          <p>This is a first task</p>
-        </div>
-        <div className="list-icon">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash-can"></i>
-        </div>
-      </div>
-      <div className="list-todo">
-        <div className="check">
-          <input type="checkbox" />
-          <p>This is a first task</p>
-        </div>
-        <div className="list-icon">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash-can"></i>
-        </div>
-      </div>
-      <div className="list-todo">
-        <div className="check">
-          <input type="checkbox" />
-          <p>This is a first task</p>
-        </div>
-        <div className="list-icon">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash-can"></i>
-        </div>
-      </div>
-      <div className="list-todo">
-        <div className="check">
-          <input type="checkbox" />
-          <p>This is a first task</p>
-        </div>
-        <div className="list-icon">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash-can"></i>
-        </div>
-      </div>
+      <ListTodo title="111111"/>
+      <ListTodo title="22222"/>
+      <ListTodo title="333333"/>
+      <ListTodo title="333333"/>
     </div>
   );
 };
