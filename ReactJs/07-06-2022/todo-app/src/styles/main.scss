@@ -1,0 +1,57 @@
+.main {
+  padding: 30px 25px 10px;
+  height: 300px;
+  .body {
+    height: 300px;
+    .main__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #adadad;
+      margin-bottom: 10px;
+      padding: 0 10px;
+      .main__item--todo {
+        display: flex;
+        align-items: center;
+        input {
+          margin-right: 30px;
+        }
+        p {
+          max-width: 320px;
+          white-space: nowrap; 
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .text-decoration-line-through{
+          text-decoration: line-through;
+          color: #adadad;
+        }
+        .text-black{
+          color: black;
+        }
+      }
+      .main__item--Icon {
+        .d-none{
+          display: none;
+        }
+        .text-black{
+          color: black;
+        }
+        span {
+          margin-left: 10px;
+        }
+        span:hover {
+          cursor: pointer;
+        }
+        span:first-child:hover {
+          color: green;
+          font-size: 20px;
+        }
+        span:last-child:hover {
+          color: red;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

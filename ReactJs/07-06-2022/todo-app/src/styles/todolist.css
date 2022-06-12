@@ -1,0 +1,13 @@
+.todolist {
+  width: 500px;
+  height: 700px;
+  background-color: #f9f6f6;
+  -webkit-box-shadow: 4px 4px 5px gray;
+          box-shadow: 4px 4px 5px gray;
+}
+
+.todolist h1 {
+  margin: 20px;
+  text-align: center;
+}
+/*# sourceMappingURL=todolist.css.map */

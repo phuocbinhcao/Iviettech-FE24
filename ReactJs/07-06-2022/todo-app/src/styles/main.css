@@ -1,0 +1,62 @@
+.main {
+  padding: 30px 25px 10px;
+  height: 430px;
+}
+
+.main .body {
+  height: 300px;
+}
+
+.main .body .main__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #adadad;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.main .body .main__item .main__item--todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .body .main__item .main__item--todo input {
+  margin-right: 30px;
+}
+
+.main .body .main__item .main__item--todo p {
+  width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.main .body .main__item .main__item--Icon span {
+  margin-left: 10px;
+}
+
+.main .body .main__item .main__item--Icon span:hover {
+  cursor: pointer;
+}
+
+.main .body .main__item .main__item--Icon span:first-child:hover {
+  color: green;
+  font-size: 20px;
+}
+
+.main .body .main__item .main__item--Icon span:last-child:hover {
+  color: red;
+  font-size: 20px;
+}
+/*# sourceMappingURL=main.css.map */

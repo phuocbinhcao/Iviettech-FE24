@@ -1,0 +1,29 @@
+.pagin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-top: 70px;
+    button{
+        padding: 5px 10px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    .pagin__number{
+        margin: 0 10px;
+        span{
+            margin: 0 10px;
+        }
+        
+        span:hover{
+            cursor: pointer;
+            color: red;
+        }
+    }
+    
+       
+      .btn--active{
+        color: red;
+      }
+}
